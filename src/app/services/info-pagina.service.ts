@@ -8,12 +8,12 @@ import { InfoPagina } from '../interfaces/info-pagina.interface';
 export class InfoPaginaService {
 
   //info: any = {}; //El onjeto any puede alojar cualquier cosa
-  info: InfoPagina = {};
+  info: InfoPagina = {};  //El tipo de dato InfoPagina fue creado por la interface de usuario InfoPagina creada en el archivo interfaces/info-pagina.interface.ts 
   cargada = false;
 
-  constructor(private http: HttpClient) { 
+  constructor(private http: HttpClient) {   //En el archivo app.module debe estar importado el modulo HttpClientModule (verel archivo app.module.ts)
 
-    console.log('Servicio de infoPágina creado');
+    //console.log('Servicio de infoPágina creado');
 
       //Leer archivo JSON
       this.http.get('assets/data/data-pagina.json').subscribe(resp=>{console.log(resp['twitter']);})
