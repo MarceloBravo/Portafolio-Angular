@@ -18,9 +18,14 @@ export class ProductosService {
     this.http.get(this.url).subscribe(
       (resp: Producto[])=>{
         this.productos = resp;
-        console.log(this.productos);
+        //console.log(this.productos);
         this.cargando = false;
       }
     );
+  }
+
+
+  public getProducto(idProducto: string){
+  return this.http.get(`https://angular-html-51baf.firebaseio.com/productos/${ idProducto }.json`);
   }
 }

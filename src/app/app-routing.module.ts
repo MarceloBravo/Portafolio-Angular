@@ -8,7 +8,7 @@ import { BlogComponent } from './pages/blog/blog.component';
 const routes: Routes = [
     { path: 'home', component: PortafolioComponent },
     { path: 'about', component: AboutComponent },
-    { path: 'item', component: ProductoComponent },
+    { path: 'item/:id', component: ProductoComponent },
     { path: 'blog', component: BlogComponent},
     { path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
