@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { InfoPaginaService } from '../../services/info-pagina.service';
+import { Router } from '@angular/router';
+import { routerNgProbeToken } from '@angular/router/src/router_module';
 //import { InfoPaginaService } from 'src/app/services/info-pagina.service';
 
 @Component({
@@ -13,9 +15,16 @@ export class HeaderComponent implements OnInit {
   //el archivo json assets/data/data-pagina.json, 
   //la interface info-pagina.interface.ts y
   //el servicio info-pagina.service.ts  
-  constructor( public infoPagina: InfoPaginaService) { }
+  constructor( public infoPagina: InfoPaginaService, private router: Router) { }  //Router nos permitira navegar hacia otra página (la url debe haber sido registradad en app-routing.module.ts)
 
   ngOnInit() {
+  }
+
+  buscarProducto(termino: string){
+    if(termino.length > 0){
+      this.router.navigate(['/search',termino]);
+    }
+    //console.log(termino);
   }
 
 }

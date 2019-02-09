@@ -13,6 +13,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ProductoComponent } from './pages/producto/producto.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BlogComponent } from './pages/blog/blog.component';
+import { SearchComponent } from './pages/search/search.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BlogComponent } from './pages/blog/blog.component';
     PortafolioComponent,
     AboutComponent,
     ProductoComponent,
-    BlogComponent
+    BlogComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
